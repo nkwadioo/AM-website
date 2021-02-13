@@ -14,10 +14,29 @@
            <img src="images/logo.svg" alt="" class="logo">
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="" class="nav__link">Ski</a></li>
-                    <li class="nav__list-item"><a href="" class="nav__link">Golf</a></li>
-                    <li class="nav__list-item"><a href="" class="nav__link">Hiking</a></li>
-                    <li class="nav__list-item"><a href="" class="nav__link">Contact</a></li>
+                    <li class="nav__list-item">
+                        <a href="" class="nav__link ski active">
+                            <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                            Ski
+                        </a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="" class="nav__link golf" onmouseover="animate(this);">
+                            <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                            Golf
+                        </a>
+                    <li class="nav__list-item">
+                        <a href="" class="nav__link hiking">
+                            <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                            Hiking
+                        </a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="" class="nav__link contact">
+                            <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                            Contact
+                        </a>
+                    </li>
                 </ul>
             </nav> 
         </div>
@@ -49,5 +68,23 @@
             <a href="" class="btn btn--outline">Get tickets</a>
         </div>
     </main>
+
+    <script>
+
+        // var link = document.getElementsByClassName("nav__link");
+
+        // var myFunction = function() {
+        //     console.log(this)
+        //     let rec = this.children[0].children[0];
+
+        //     debugger
+        // };
+
+        // for (var i = 0; i < link.length; i++) {
+        //     link[i].addEventListener('mouseenter', myFunction, false);
+        // }
+
+        
+    </script>
 </body>
 </html>

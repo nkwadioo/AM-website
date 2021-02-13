@@ -95,11 +95,15 @@ nav {
 .nav__link {
     text-decoration: none;
     color: inherit;
+
+    margin: 0 0 2em;
+    position: relative;
+    text-decoration: none;
 }
 
-.nav__link:hover {
+/* .nav__link:hover {
     color: var(--clr-primary);
-}
+} */
 
 .weather {
     display: grid;
@@ -168,6 +172,16 @@ nav {
     font-size: 3rem;
 }
 
+.active,
+.nav__link:hover {
+    font-weight: var(--fw-black);
+    letter-spacing: 1px;
+}
+
+svg {
+    display: none;
+}
+
 @media (min-width: 520px) {
     .main__title {
         margin-bottom: 0;
@@ -204,14 +218,14 @@ nav {
 
 }
 
-@media (min-width: 730px) {
+@media (min-width: 800px) {
     header {
         display: grid;
         grid-template-columns: var(--grid);
         align-items: center;
     }
 
-
+    
 
     .wrapper,
     .weather {
@@ -240,13 +254,72 @@ nav {
         margin-top: 0;
     }
 
-    /* nav {
-        grid-column: 2 / 4;
+    /* 
+    
+    BUTTON
+    
+    */
+
+    .nav__link {
+        text-transform: uppercase;
+        width: 100%;
+        /* color:red; */
+        font-weight: var(--fw-bold);
+        padding: 0.52rem;
     }
 
-    .logo {
-        grid-column: 2;
+
+    svg {
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0; 
+        width: 100%; 
+    }
+
+    rect {
+        fill: none;
+        stroke: #FFF;
+        stroke-width: 2;
+        stroke-dasharray: 422, 0;
+        transition: all 0.35s linear;
+    }
+
+    
+
+    
+
+    /* .nav__link:hover:nth-child(1) rect {
+        stroke-dasharray: 15, 160;
+    }
+    .nav__link:hover:nth-child(2) rect {
+        stroke-dasharray: 21, 174;
     } */
+
+    .active rect,  
+    .nav__link:focus rect,
+    .nav__link:hover rect {
+        stroke: var(--clr-primary);
+        stroke-width: 5;
+        stroke-dashoffset: 48;
+        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .ski rect{
+        stroke-dasharray: 15, 86;
+    }
+    .golf rect{
+        stroke-dasharray: 15, 100;
+    }
+    .hiking rect{
+        stroke-dasharray: 16, 114;
+    }
+    .contact rect{
+        stroke-dasharray: 16, 132;
+    }
+
+
 }
 
 @media (min-width: 800px) {
@@ -254,6 +327,8 @@ nav {
         width: 18ch;
     }
 }
+
+
 @media (min-width: 810px) {
     .main--ski {
         background-position: center right;
