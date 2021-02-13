@@ -94,7 +94,7 @@ nav {
 
 .nav__link {
     text-decoration: none;
-    color: inherit;
+    color: gray;
 
     margin: 0 0 2em;
     position: relative;
@@ -176,6 +176,7 @@ nav {
 .nav__link:hover {
     font-weight: var(--fw-black);
     letter-spacing: 1px;
+    color: inherit
 }
 
 svg {
